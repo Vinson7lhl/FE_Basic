@@ -27,29 +27,32 @@
                 },
                 options: {
                     grid: {
-                        type: "classic"
+                        type: "classic",
+                        title: '李宏磊的表格',
+                        showReportFiltersArea: true
+                    },
+                    general:{
+                        configuratorActive: false
                     }
+                },
+                cellData: {
+                    height: 500
                 },
                 "slice": {
                     "rows": [{
                             "uniqueName": "Product Info",
                             "sort": "asc"
-                        },
-                        {
-                            "uniqueName": "Measures"
                         }
                     ],
-                    "columns": [{
-                            "uniqueName": "Category",
-                            "sort": "asc"
-                        },
+                    "columns": [
                         {
-                            "uniqueName": "Country",
+                            "uniqueName": "Part Area",
                             "sort": "asc"
                         }
                     ],
                     "measures": [{
                         "uniqueName": "Price",
+                        // 聚合方式：比如 求和，求平均值，求方差
                         "aggregation": "sum"
                     }],
                     "drills": {
@@ -61,6 +64,10 @@
                         }]
                     }
                 }
+            },
+            global: {
+                // replace this path with the path to your own translated file
+                localization: "/lib/zh.json"
             }
         });
 
@@ -72,6 +79,24 @@
                         hierarchy: "Product Info",
                         parent: "Business Type"
                     },
+                    "Business Type": {
+                        type: "level",
+                        hierarchy: "Product Info"
+                    },
+
+
+                    'Country':{
+                        type: "level",
+                        parent: "part",
+                        hierarchy: "Part Area"
+                    },
+                    "part": {
+                        type: "level",
+                        hierarchy: "Part Area"
+                    },
+
+
+
                     "Size": {
                         type: "string"
                     },
@@ -79,13 +104,6 @@
                         type: "string"
                     },
                     "Destination": {
-                        type: "string"
-                    },
-                    "Business Type": {
-                        type: "level",
-                        hierarchy: "Product Info"
-                    },
-                    "Country": {
                         type: "string"
                     },
                     "Price": {
@@ -99,14 +117,15 @@
                     }
                 },
                 {
+                    "Business Type": "Specialty Bike Shop",
                     "Category": "Accessories",
                     "Size": "262 oz",
                     "Color": "red",
                     "Destination": "Australia",
-                    "Business Type": "Specialty Bike Shop",
                     "Country": "Australia",
                     "Price": 174,
                     "Quantity": 225,
+                    "part": 'N',
                     "Discount": 23
                 },
                 {
@@ -118,6 +137,7 @@
                     "Country": "Canada",
                     "Price": 502,
                     "Quantity": 90,
+                    "part": 'N',
                     "Discount": 17
                 },
                 {
@@ -129,6 +149,7 @@
                     "Country": "France",
                     "Price": 242,
                     "Quantity": 855,
+                    "part": 'N',
                     "Discount": 37
                 },
                 {
@@ -140,6 +161,7 @@
                     "Country": "Germany",
                     "Price": 102,
                     "Quantity": 897,
+                    "part": 'N',
                     "Discount": 42
                 },
                 {
@@ -151,6 +173,7 @@
                     "Country": "United Kingdom",
                     "Price": 126,
                     "Quantity": 115,
+                    "part": 'N',
                     "Discount": 44
                 },
                 {
@@ -162,6 +185,7 @@
                     "Country": "United States",
                     "Price": 1246,
                     "Quantity": 88,
+                    "part": 'N',
                     "Discount": 47
                 },
                 {
@@ -173,6 +197,7 @@
                     "Country": "Australia",
                     "Price": 680,
                     "Quantity": 66,
+                    "part": 'N',
                     "Discount": 80
                 },
                 {
@@ -184,6 +209,7 @@
                     "Country": "Canada",
                     "Price": 1241,
                     "Quantity": 939,
+                    "part": 'N',
                     "Discount": 66
                 },
                 {
@@ -195,6 +221,7 @@
                     "Country": "Canada",
                     "Price": 1241,
                     "Quantity": 939,
+                    "part": 'N',
                     "Discount": 66
                 },
                 {
@@ -206,6 +233,7 @@
                     "Country": "France",
                     "Price": 150,
                     "Quantity": 67,
+                    "part": 'N',
                     "Discount": 30
                 },
                 {
@@ -217,6 +245,7 @@
                     "Country": "Germany",
                     "Price": 244,
                     "Quantity": 963,
+                    "part": 'N',
                     "Discount": 22
                 },
                 {
@@ -228,6 +257,7 @@
                     "Country": "United Kingdom",
                     "Price": 501,
                     "Quantity": 556,
+                    "part": 'N',
                     "Discount": 9
                 },
                 {
@@ -239,6 +269,7 @@
                     "Country": "United States",
                     "Price": 4960,
                     "Quantity": 898,
+                    "part": 'N',
                     "Discount": 41
                 },
                 {
@@ -250,6 +281,7 @@
                     "Country": "Australia",
                     "Price": 9,
                     "Quantity": 578,
+                    "part": 'N',
                     "Discount": 8
                 },
                 {
@@ -261,6 +293,7 @@
                     "Country": "Canada",
                     "Price": 3655,
                     "Quantity": 64,
+                    "part": 'N',
                     "Discount": 70
                 },
                 {
@@ -272,6 +305,7 @@
                     "Country": "France",
                     "Price": 1654,
                     "Quantity": 556,
+                    "part": 'N',
                     "Discount": 95
                 },
                 {
@@ -283,6 +317,7 @@
                     "Country": "Germany",
                     "Price": 1190,
                     "Quantity": 292,
+                    "part": 'N',
                     "Discount": 36
                 },
                 {
@@ -294,6 +329,7 @@
                     "Country": "United Kingdom",
                     "Price": 1222,
                     "Quantity": 730,
+                    "part": 'S',
                     "Discount": 38
                 },
                 {
@@ -305,6 +341,7 @@
                     "Country": "United States",
                     "Price": 7941,
                     "Quantity": 73,
+                    "part": 'S',
                     "Discount": 53
                 },
                 {
@@ -316,6 +353,7 @@
                     "Country": "Australia",
                     "Price": 6829,
                     "Quantity": 19,
+                    "part": 'S',
                     "Discount": 56
                 },
                 {
@@ -327,6 +365,7 @@
                     "Country": "Canada",
                     "Price": 1664,
                     "Quantity": 19,
+                    "part": 'S',
                     "Discount": 75
                 },
                 {
@@ -338,6 +377,7 @@
                     "Country": "France",
                     "Price": 2995,
                     "Quantity": 98,
+                    "part": 'S',
                     "Discount": 88
                 },
                 {
@@ -349,6 +389,7 @@
                     "Country": "Germany",
                     "Price": 1487,
                     "Quantity": 96,
+                    "part": 'S',
                     "Discount": 100
                 },
                 {
@@ -360,6 +401,7 @@
                     "Country": "United Kingdom",
                     "Price": 9245,
                     "Quantity": 51,
+                    "part": 'S',
                     "Discount": 29
                 },
                 {
@@ -371,6 +413,7 @@
                     "Country": "United States",
                     "Price": 9008,
                     "Quantity": 76,
+                    "part": 'S',
                     "Discount": 66
                 },
                 {
@@ -382,6 +425,7 @@
                     "Country": "Australia",
                     "Price": 9376,
                     "Quantity": 92,
+                    "part": 'S',
                     "Discount": 7
                 },
                 {
@@ -393,6 +437,7 @@
                     "Country": "Canada",
                     "Price": 1531,
                     "Quantity": 56,
+                    "part": 'N',
                     "Discount": 31
                 },
                 {
@@ -404,6 +449,7 @@
                     "Country": "France",
                     "Price": 5421,
                     "Quantity": 83,
+                    "part": 'S',
                     "Discount": 22
                 },
                 {
@@ -415,6 +461,7 @@
                     "Country": "Germany",
                     "Price": 6975,
                     "Quantity": 73,
+                    "part": 'S',
                     "Discount": 41
                 },
                 {
@@ -426,6 +473,7 @@
                     "Country": "United Kingdom",
                     "Price": 4320,
                     "Quantity": 59,
+                    "part": 'S',
                     "Discount": 100
                 },
                 {
@@ -437,6 +485,7 @@
                     "Country": "United States",
                     "Price": 3200,
                     "Quantity": 27,
+                    "part": 'S',
                     "Discount": 41
                 },
                 {
@@ -447,6 +496,7 @@
                     "Business Type": "Warehouse",
                     "Country": "Australia",
                     "Price": 6688,
+                    "part": 'S',
                     "Quantity": 22,
                     "Discount": 41
                 },
@@ -457,6 +507,7 @@
                     "Destination": "France",
                     "Business Type": "Warehouse",
                     "Country": "Canada",
+                    "part": 'S',
                     "Price": 699,
                     "Quantity": 22,
                     "Discount": 42
@@ -470,6 +521,7 @@
                     "Country": "France",
                     "Price": 5403,
                     "Quantity": 75,
+                    "part": 'S',
                     "Discount": 70
                 },
                 {
@@ -481,6 +533,7 @@
                     "Country": "Germany",
                     "Price": 6377,
                     "Quantity": 28,
+                    "part": 'S',
                     "Discount": 49
                 },
                 {
@@ -492,6 +545,7 @@
                     "Country": "United Kingdom",
                     "Price": 2471,
                     "Quantity": 93,
+                    "part": 'S',
                     "Discount": 14
                 },
                 {
@@ -503,6 +557,7 @@
                     "Country": "United States",
                     "Price": 6650,
                     "Quantity": 40,
+                    "part": 'S',
                     "Discount": 4
                 },
                 {
@@ -514,6 +569,7 @@
                     "Country": "Australia",
                     "Price": 865,
                     "Quantity": 4513,
+                    "part": 'S',
                     "Discount": 70
                 },
                 {
@@ -525,6 +581,7 @@
                     "Country": "Canada",
                     "Price": 511,
                     "Quantity": 4615,
+                    "part": 'S',
                     "Discount": 20
                 },
                 {
@@ -536,6 +593,7 @@
                     "Country": "France",
                     "Price": 981,
                     "Quantity": 1854,
+                    "part": 'S',
                     "Discount": 36
                 },
                 {
@@ -547,6 +605,7 @@
                     "Country": "Germany",
                     "Price": 57,
                     "Quantity": 1187,
+                    "part": 'S',
                     "Discount": 10
                 },
                 {
@@ -558,6 +617,7 @@
                     "Country": "United Kingdom",
                     "Price": 675,
                     "Quantity": 1527,
+                    "part": 'S',
                     "Discount": 38
                 },
                 {
@@ -569,6 +629,7 @@
                     "Country": "United States",
                     "Price": 40,
                     "Quantity": 4342,
+                    "part": 'S',
                     "Discount": 72
                 },
                 {
@@ -580,6 +641,7 @@
                     "Country": "Australia",
                     "Price": 400,
                     "Quantity": 8975,
+                    "part": 'S',
                     "Discount": 63
                 },
                 {
@@ -591,6 +653,7 @@
                     "Country": "Canada",
                     "Price": 971,
                     "Quantity": 3522,
+                    "part": 'S',
                     "Discount": 90
                 },
                 {
@@ -602,6 +665,7 @@
                     "Country": "France",
                     "Price": 357,
                     "Quantity": 3939,
+                    "part": 'S',
                     "Discount": 93
                 },
                 {
@@ -613,6 +677,7 @@
                     "Country": "Germany",
                     "Price": 820,
                     "Quantity": 3560,
+                    "part": 'S',
                     "Discount": 40
                 },
                 {
@@ -623,6 +688,7 @@
                     "Business Type": "Value Added Reseller",
                     "Country": "United Kingdom",
                     "Price": 520,
+                    "part": 'S',
                     "Quantity": 3892,
                     "Discount": 32
                 },
@@ -635,6 +701,7 @@
                     "Country": "United States",
                     "Price": 448,
                     "Quantity": 3906,
+                    "part": 'N',
                     "Discount": 24
                 },
                 {
@@ -646,6 +713,7 @@
                     "Country": "Australia",
                     "Price": 513,
                     "Quantity": 9790,
+                    "part": 'N',
                     "Discount": 40
                 },
                 {
@@ -657,6 +725,7 @@
                     "Country": "Canada",
                     "Price": 977,
                     "Quantity": 6107,
+                    "part": 'N',
                     "Discount": 8
                 },
                 {
@@ -668,6 +737,7 @@
                     "Country": "France",
                     "Price": 118,
                     "Quantity": 4718,
+                    "part": 'N',
                     "Discount": 84
                 },
                 {
@@ -679,6 +749,7 @@
                     "Country": "Germany",
                     "Price": 161,
                     "Quantity": 7988,
+                    "part": 'N',
                     "Discount": 29
                 },
                 {
@@ -690,6 +761,7 @@
                     "Country": "United Kingdom",
                     "Price": 239,
                     "Quantity": 840,
+                    "part": 'N',
                     "Discount": 89
                 },
                 {
@@ -701,6 +773,7 @@
                     "Country": "United States",
                     "Price": 327,
                     "Quantity": 6574,
+                    "part": 'N',
                     "Discount": 79
                 },
                 {
@@ -712,6 +785,7 @@
                     "Country": "Australia",
                     "Price": 284,
                     "Quantity": 2471,
+                    "part": 'N',
                     "Discount": 42
                 },
                 {
@@ -723,6 +797,7 @@
                     "Country": "Canada",
                     "Price": 827,
                     "Quantity": 4772,
+                    "part": 'N',
                     "Discount": 26
                 },
                 {
@@ -734,6 +809,7 @@
                     "Country": "France",
                     "Price": 967,
                     "Quantity": 1646,
+                    "part": 'N',
                     "Discount": 42
                 },
                 {
@@ -745,6 +821,7 @@
                     "Country": "Germany",
                     "Price": 569,
                     "Quantity": 6568,
+                    "part": 'N',
                     "Discount": 58
                 },
                 {
@@ -756,6 +833,7 @@
                     "Country": "United Kingdom",
                     "Price": 156,
                     "Quantity": 7585,
+                    "part": 'N',
                     "Discount": 35
                 },
                 {
@@ -767,6 +845,7 @@
                     "Country": "United States",
                     "Price": 845,
                     "Quantity": 4208,
+                    "part": 'N',
                     "Discount": 42
                 },
                 {
@@ -778,6 +857,7 @@
                     "Country": "Australia",
                     "Price": 838,
                     "Quantity": 6460,
+                    "part": 'N',
                     "Discount": 41
                 },
                 {
@@ -789,6 +869,7 @@
                     "Country": "Canada",
                     "Price": 51,
                     "Quantity": 410,
+                    "part": 'N',
                     "Discount": 97
                 },
                 {
@@ -800,6 +881,7 @@
                     "Country": "France",
                     "Price": 95,
                     "Quantity": 2307,
+                    "part": 'N',
                     "Discount": 64
                 },
                 {
@@ -811,6 +893,7 @@
                     "Country": "Germany",
                     "Price": 885,
                     "Quantity": 6843,
+                    "part": 'N',
                     "Discount": 10
                 },
                 {
@@ -822,6 +905,7 @@
                     "Country": "United Kingdom",
                     "Price": 239,
                     "Quantity": 7541,
+                    "part": 'S',
                     "Discount": 36
                 }
             ]
