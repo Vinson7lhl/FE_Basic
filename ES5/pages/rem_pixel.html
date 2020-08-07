@@ -36,6 +36,7 @@
     <div class='level_0'>10px字体</div>
     <div class='level_1'>12px字体</div>
     <div class='level_2'>16px字体</div>
+    <button class='fullScreen'>全屏</button>
 
     ----------------------------------------------------------------------------------------------------------------
     <div class='level_3'>14px === 1.4rem === 字体</div>
@@ -56,6 +57,21 @@
             };
         window.addEventListener(resizeEvt, recalc, false);
         document.addEventListener('DOMContentLoaded', recalc, false);
+
+        var html_dom = document.getElementsByTagName('html')[0]
+        var button_dom = document.getElementsByClassName('fullScreen')[0]
+        html_dom.mozRequestFullScreen()
+        button_dom.onclick = function () {
+            if (html_dom.requestFullscreen) {
+                html_dom.requestFullscreen();
+            } else if (html_dom.mozRequestFullScreen) {
+                html_dom.mozRequestFullScreen();
+            } else if (html_dom.webkitRequestFullscreen) {
+                html_dom.webkitRequestFullscreen();
+            } else if (html_dom.msRequestFullscreen) {
+                html_dom.msRequestFullscreen();
+            }
+        }
     </script>
 </body>
 
