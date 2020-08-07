@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        chrome 无法正常显示小于12px的字体
+        Firefox 可以正常显示
+        */
+        .level_0 {
+            font-size: 10px;
+        }
+
+        .level_1 {
+            font-size: 12px;
+        }
+
+        .level_2 {
+            font-size: 16px;
+        }
+
+        .level_3 {
+            font-size: 1.4rem;
+        }
+
+        .level_4 {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='level_0'>10px字体</div>
+    <div class='level_1'>12px字体</div>
+    <div class='level_2'>16px字体</div>
+
+    ----------------------------------------------------------------------------------------------------------------
+    <div class='level_3'>14px === 1.4rem === 字体</div>
+    <div class='level_4'>14px字体</div>
+
+    <script>
+        /*----------------------------------------------------------------------------------------------------------------/
+        根据屏幕大小更改html标签字体大小
+        设备宽= root_px * rem_num
+        root_px = 设备宽/设计稿宽
+        -----------------------------------------------------------------------------------------------------------------*/
+        var baseNum;
+        var docEl = document.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                docEl.style.fontSize = 10 * (docEl.clientWidth / 375) + 'px';
+            };
+        window.addEventListener(resizeEvt, recalc, false);
+        document.addEventListener('DOMContentLoaded', recalc, false);
+    </script>
+</body>
+
+</html>
