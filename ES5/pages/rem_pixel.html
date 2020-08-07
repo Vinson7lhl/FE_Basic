@@ -52,6 +52,7 @@
             resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
             recalc = function () {
                 docEl.style.fontSize = 10 * (docEl.clientWidth / 375) + 'px';
+                docEl.style.fontSize = 10 * (docEl.clientWidth / 1920) + 'px';
             };
         window.addEventListener(resizeEvt, recalc, false);
         document.addEventListener('DOMContentLoaded', recalc, false);
