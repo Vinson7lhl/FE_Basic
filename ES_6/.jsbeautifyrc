@@ -1,0 +1,10 @@
+{
+    "indent_with_tabs": true,
+    "max_preserve_newlines": 2,
+    "newline_between_rules":true,
+    "indent_level":1,
+    "js":{
+        "max_preserve_newlines": 2,
+        "indent_level":0
+    }
+}

@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>*测试任意代码*</title>
-    <link rel="stylesheet" href="../css/style.css">
+	<meta charset="UTF-8">
+	<title>
+		*测试任意代码*
+	</title>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
+
+
 <body>
+	<a href="javaScript:void new Date().toLocaleTimeString()">点击我！！！也不会有变化，除非去掉void，这样返回值会替换这段文本</a>
+	<button type="button">点击我触发click</button>
+	<button type="button" id="doubleClickid" class="doubleClick">同一个按钮，绑定两个click</button>
+	<p class="getFuture">
+		获取未来dom
+	</p>
 
-    <a href="javaScript:void new Date().toLocaleTimeString()">点击我！！！也不会有变化，除非去掉void，这样返回值会替换这段文本</a>
-    <button type="button">点击我触发click</button>
-    <button type="button" id="doubleClickid" class="doubleClick">同一个按钮，绑定两个click</button>
-    <p class="getFuture">获取未来dom</p>
+	<div class="positionXY" id="dom1"></div>
+	<div class="positionXY">
+	</div>
+	<div id='kk' class="positionXY">
+	</div>
+	<div class="positionXY">
+	</div>
+	<div class="positionXY">
+	</div>
 
-    <div class="positionXY" id="dom1"></div>
-    <div class="positionXY"></div>
-    <div class="positionXY"></div>
-    <div class="positionXY"></div>
-    <div class="positionXY"></div>
-
-    <button class="TestDefered">defered</button>
-    <button class='errorTrigger'>触发错误</button>
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="../js/test.js"></script>
+	<button class="TestDefered">defered</button>
+	<button class='errorTrigger'>触发错误</button>
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js">
+	</script>
+	<script src="../js/test.js">
+	</script>
 </body>
+
+
 </html>
