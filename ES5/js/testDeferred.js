@@ -1,7 +1,7 @@
-$(function(){
+$(function () {
 
-    var $_button3=$("<button class='button3'>button3</button>");
-    $_button3.on("click",function(){
+    var $_button3 = $("<button class='button3'>button3</button>");
+    $_button3.on("click", function () {
         alert("button3被点击啦！");
     });
     $("body").append($_button3);
@@ -44,7 +44,7 @@ $(function(){
     // this_deferred.done(function(data){
     //     console.log("异步成功：返回的数据为——"+data);
     // });
-    
+
 
     /**
      * 链式调用：
@@ -53,28 +53,29 @@ $(function(){
      * 执行完成2
      * 第2个defer返回的数据为——data2
      */
-    function runAsync1(){
+    function runAsync1() {
         var def1 = $.Deferred();
         //做一些异步操作
-        setTimeout(function(){
+        setTimeout(function () {
             def1.resolve("data1");
         }, 2000);
         return def1;
     }
-    function runAsync2(){
+
+    function runAsync2() {
         var def2 = $.Deferred();
         //做一些异步操作
-        setTimeout(function(){
+        setTimeout(function () {
             def2.resolve("data2");
         }, 2000);
         return def2;
     }
     runAsync1()
-            .then(function(data){
-                console.log("第1个defer返回的数据为——"+data);
-                return runAsync2();
-            })
-            .then(function(data){
-                console.log("第2个defer返回的数据为——"+data);
-            });
+        .then(function (data) {
+            console.log("第1个defer返回的数据为——" + data);
+            return runAsync2();
+        })
+        .then(function (data) {
+            console.log("第2个defer返回的数据为——" + data);
+        });
 });
