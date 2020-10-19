@@ -11,8 +11,8 @@ var args_easy = {
 	from_start: 1,
 	to_start: 0
 };
-import { a, c }
-from 'c'
+// import { a, c }
+// from 'c'
 var s = [{
 		a: 1,
 		b: 2
