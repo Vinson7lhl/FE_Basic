@@ -494,15 +494,23 @@ a:hover {
 /*-----------------------------------------------------------------------------------------
 	分栏
 ------------------------------------------------------------------------------------------*/
-
+.columnContainer{
+    width:200px;
+    overflow-x: auto;
+}
 .columTest {
-    width: 500px;
-    column-count: 3;
+    width: 100px;
+    height:100px;
+    column-count: 1;
+    column-gap: 10px;
+    column-rule: 1px solid #d8d8d8;
     background-color: #000000
 }
 
 .perColum {
-    width: 150px;
+    width: 100px;
+    height:20px;
+    line-height:20px;
     background-color: #4e4e4e;
 }
 
