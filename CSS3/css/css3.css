@@ -158,9 +158,9 @@ a:hover {
     display: flex;
     width: 150px;
     /*
-	flex是一个复合属性：flex-grow:1(如果不写默认为1);flex-shrink:1(如果不写默认为1);flex-basis:默认为0%，
-	如果写auto则按照本模块的宽度
-*/
+        flex是一个复合属性：flex-grow:1(如果不写默认为1);flex-shrink:1(如果不写默认为1);flex-basis:默认为0%，
+        如果写auto则按照本模块的宽度
+    */
     /* flex:1; */
     height: 20px;
     flex-shrink: 0;
@@ -475,12 +475,19 @@ a:hover {
 
 .lineHeight {
     background-color: #000000;
+    display: table;
+    height:100px;
 }
 
 .thisLine {
-    margin: 0;
-    line-height: 1;
+    display: table-cell;
     color: white;
+    vertical-align: middle;
+}
+.point{
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /*-----------------------------------------------------------------------------------------
