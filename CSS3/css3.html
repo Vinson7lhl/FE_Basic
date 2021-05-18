@@ -12,8 +12,13 @@
 -->
 
 <body>
+	<div class='titleBar'>-- 字体测试 --</div>
 	<div class='fontType'>字体引入</div>
-	<div class='seperateLine'></div>
+
+	<div class='titleBar'>-- 内联模块测试 --</div>
+	<div>
+		!<span class='inlineBlock'>内联模块</span>!
+	</div>
 	<button class='btn'>改变button</button>
 	<!--
 		1、template标签浏览器不会渲染出来，但可以通过js进行实例化；即可以拿到其内容内容，其样式默认是display：none；
@@ -44,6 +49,7 @@
 
 
 	<!--a超链接样式-->
+	<div class='titleBar'>-- a超链接样式 --</div>
 	<a class='aStyle' target="_blank" href="http://baidu.com">超链接的样式love hate</a>
 	<a class='aStyle2' target="_blank" href="http://hao123.com">jjj hate</a>
 
@@ -81,10 +87,11 @@
 
 
 	<!--display:table-->
-	<div class='displayTest'>
+	<div class='titleBar'>-- 垂直居中 --</div>
+	<div class='displayTest' title='display-table模式'>
 		<span class='beTable'>
 			<span class='beTr'>
-				<span class='beTd'>span的td标签1-1</span>
+				<span class='beTd'><div>牛</div></span>
 				<span class='beTd'>span的td标签1-2</span>
 			</span>
 			<span class='beTr'>
@@ -103,6 +110,9 @@
 			</tr>
 		</table>
 		<span>内联</span>
+	</div>
+	<div class='lineHeight'>
+		<span>普通文本</span>
 	</div>
 
 
@@ -335,9 +345,9 @@
 		<span class='boom'>这里是容器</span>
 	</div>
 
-	<script type="text/javascript" src="lib/jQuery/jquery-2.1.4.js"></script>
-	<script src="lib/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script type="text/javascript" src="js/css3.js"></script>
+	<script src="./lib/jQuery/jquery-3.0.0.min.js"></script>
+	<script src="./lib/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/css3.js"></script>
 </body>
 
 </html>

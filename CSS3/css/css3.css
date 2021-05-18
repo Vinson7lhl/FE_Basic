@@ -9,6 +9,24 @@ div{
 .btn{
     
 }
+.inlineBlock{
+    background-color: #006400;
+    padding:10px;
+    border:10px solid #30363C;
+    margin-bottom:20px;
+}
+.titleBar{
+    background-color: #30363C;
+    color:#ffffff;
+    font-style: italic;
+    margin-bottom:4px;
+    margin-top:4px;
+}
+.lineHeight{
+    height:100px;
+    line-height: 100px;
+    color:#ffffff;
+}
 /*
     分隔行
 */
@@ -314,6 +332,7 @@ a:hover {
 .beTd {
     display: table-cell;
     width: 150px;
+    vertical-align: middle;
 }
 
 /*-----------------------------------------------------------------------------------------
