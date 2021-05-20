@@ -1,50 +1,52 @@
-body,html,div,p{
-	margin:0;
-	padding:0;
+body,
+html,
+div,
+p {
+    margin: 0;
+    padding: 0;
 }
-div{
-	box-sizing: border-box;
+div {
+    box-sizing: border-box;
 }
 /* @import 'public.css'; */
-.btn{
-    
+.btn {
 }
-.inlineBlock{
+.inlineBlock {
     background-color: #006400;
-    padding:10px;
-    border:10px solid #30363C;
-    margin-bottom:20px;
+    padding: 10px;
+    border: 10px solid #30363c;
+    margin-bottom: 20px;
 }
-.titleBar{
-    background-color: #30363C;
-    color:#ffffff;
+.titleBar {
+    background-color: #30363c;
+    color: #ffffff;
     font-style: italic;
-    margin-bottom:4px;
-    margin-top:4px;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
-.lineHeight{
-    height:100px;
+.lineHeight {
+    height: 100px;
     line-height: 100px;
-    color:#ffffff;
+    color: #ffffff;
 }
 /*
     分隔行
 */
-.seperateLine{
-    width:100%;
-    height:2px;
+.seperateLine {
+    width: 100%;
+    height: 2px;
     background-color: black;
-    margin:5px 0px 5px 0px;
-    clear:both;
+    margin: 5px 0px 5px 0px;
+    clear: both;
 }
-@font-face{
+@font-face {
     font-family: lhl;
-    src: url('../font/毛笔书法字体(启功体)繁启体.TTF');
+    src: url("../font/毛笔书法字体(启功体)繁启体.TTF");
     font-stretch: condensed;
     font-style: italic;
     font-weight: bold;
 }
-.fontType{
+.fontType {
     font-family: lhl;
     font-size: 28px;
 }
@@ -78,7 +80,7 @@ div{
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: #0000FF;
+    background-color: #0000ff;
     z-index: 1000;
     bottom: 50%;
 }
@@ -95,7 +97,7 @@ div{
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: #006CFF;
+    background-color: #006cff;
     z-index: 99;
     top: 0px;
 }
@@ -145,15 +147,15 @@ a:hover {
     color: red;
 }
 
-.notLi:not(:last-child){
-	border-bottom:1px solid #333333
+.notLi:not(:last-child) {
+    border-bottom: 1px solid #333333;
 }
 
-.tNot .tNot2{
-    font-size:20px;
+.tNot .tNot2 {
+    font-size: 20px;
 }
-.tNot2[hhh='att']{
-    font-size:12px;
+.tNot2[hhh="att"] {
+    font-size: 12px;
 }
 /*-----------------------------------------------------------------------------------------
  flex弹性盒子：非常适合h5
@@ -165,7 +167,7 @@ a:hover {
 }
 
 .outer {
-    width:800px;
+    width: 800px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -210,7 +212,7 @@ a:hover {
 }
 
 .flexContent:nth-child(5) {
-    width:1200px;
+    width: 1200px;
     background-color: #4e4e4e;
 }
 
@@ -219,57 +221,93 @@ a:hover {
     width: 150px;
 }
 /*
-    左右固定宽度，中间弹性填满：flex写法，本质是flex-grow算法
+    圣杯布局：Flex
 */
 #flex_cup {
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
 }
-.container{
+.container {
     display: flex;
-    height:100px;
+    height: 100px;
 }
 
-.models{
+.models {
     text-align: center;
     line-height: 100px;
 }
-.leftModel{
-    width:100px;
+.leftModel {
+    width: 100px;
     background-color: burlywood;
     /*
         注意：此处已经默认 flex: 0 1 auto;即grow为0，shrink为1,basis为模块自己的宽度
     */
 }
-.middleModel{
+.middleModel {
     background-color: cadetblue;
-    flex:1;
+    flex: 1;
 }
-.rightModel{
-    width:100px;
+.rightModel {
+    width: 100px;
     background-color: chocolate;
+}
+
+/*
+    圣杯布局：Float
+*/
+#container {
+    padding-left: 200px; /* leftContent width */
+    padding-right: 150px; /* rightContent width */
+    overflow: hidden;
+}
+
+#container .column {
+    position: relative;
+    float: left;
+    text-align: center;
+    height: 300px;
+    line-height: 300px;
+}
+
+#center {
+    width: 100%;
+    background: rgb(206, 201, 201);
+}
+
+#left {
+    width: 200px; /* leftContent width */
+    right: 200px; /* leftContent width */
+    margin-left: -100%;
+    background: rgba(95, 179, 235, 0.972);
+}
+
+#right {
+    width: 150px; /* rightContent width */
+    margin-left: -150px; /* rightContent width */
+    right: -150px;
+    background: rgb(231, 105, 2);
 }
 
 /*
     flex-grow
 */
-.growContainer{
+.growContainer {
     display: flex;
-    height:100px;
-    width:500px;
+    height: 100px;
+    width: 500px;
 }
-.grow1{
-    width:50px;
+.grow1 {
+    width: 50px;
     background-color: burlywood;
     flex-grow: 1;
 }
-.grow2{
-    width:100px;
+.grow2 {
+    width: 100px;
     background-color: cadetblue;
     flex-grow: 2;
 }
-.grow3{
-    width:150px;
+.grow3 {
+    width: 150px;
     background-color: chocolate;
     flex-grow: 3;
 }
@@ -277,23 +315,23 @@ a:hover {
 /*
     flex-shrink
 */
-.shrinkContainer{
+.shrinkContainer {
     display: flex;
-    height:100px;
-    width:500px;
+    height: 100px;
+    width: 500px;
 }
-.shrink1{
-    width:100px;
+.shrink1 {
+    width: 100px;
     background-color: burlywood;
     flex-shrink: 1;
 }
-.shrink2{
-    width:200px;
+.shrink2 {
+    width: 200px;
     background-color: cadetblue;
     flex-shrink: 1;
 }
-.shrink3{
-    width:300px;
+.shrink3 {
+    width: 300px;
     background-color: chocolate;
     flex-shrink: 1;
 }
@@ -343,35 +381,35 @@ a:hover {
     width: 200px;
     height: 200px;
     overflow: auto;
-    background: #006400 url('../img/test.jpg') repeat fixed left center;
+    background: #006400 url("../img/test.jpg") repeat fixed left center;
 }
 
 /*-----------------------------------------------------------------------------------------
  浮动清除测试
 ------------------------------------------------------------------------------------------*/
-.floatContent{
-	background-color: #000000;
-	color:#ffffff;
-	overflow: auto;
+.floatContent {
+    background-color: #000000;
+    color: #ffffff;
+    overflow: auto;
 }
-.floatL{
-	float:left;
-	width:100px;
-	height:100px;
-	background-color: #4e4e4e;
+.floatL {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #4e4e4e;
 }
-.floatR{
-	float:right;
-	margin-left:100px;
-	width:100px;
-	height:100px;
-	background-color: #30363C;
+.floatR {
+    float: right;
+    margin-left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: #30363c;
 }
-.outsideGuy{
-	width:100px;
-	height:100px;
-	color:#ffffff;
-	background-color: #873991;
+.outsideGuy {
+    width: 100px;
+    height: 100px;
+    color: #ffffff;
+    background-color: #873991;
 }
 /*可行*/
 /* .floatContent:after{
@@ -397,11 +435,11 @@ a:hover {
     transform: rotateX(-30deg) rotateY(30deg);
 }
 
-.cube>div {
+.cube > div {
     position: absolute;
     width: 2em;
     height: 2em;
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, 0.1);
     border: 1px solid #999;
     color: white;
     text-align: center;
@@ -450,13 +488,13 @@ a:hover {
     width: 200px;
     height: 100px;
     overflow: hidden;
-    background-color: #0000FF;
+    background-color: #0000ff;
 }
 
 .marginContent {
     width: 50px;
     height: 50px;
-    background-color: #006CFF;
+    background-color: #006cff;
     margin-bottom: -10%;
 }
 
@@ -495,7 +533,7 @@ a:hover {
 .lineHeight {
     background-color: #000000;
     display: table;
-    height:100px;
+    height: 100px;
 }
 
 .thisLine {
@@ -503,7 +541,7 @@ a:hover {
     color: white;
     vertical-align: middle;
 }
-.point{
+.point {
     color: white;
     display: table-cell;
     vertical-align: middle;
@@ -520,30 +558,30 @@ a:hover {
     height: 100px;
     background-color: #4e4e4e;
     padding: 10px;
-    border: 10px solid #0000FF;
+    border: 10px solid #0000ff;
     margin: 10px;
 }
 
 /*-----------------------------------------------------------------------------------------
 	分栏
 ------------------------------------------------------------------------------------------*/
-.columnContainer{
-    width:200px;
+.columnContainer {
+    width: 200px;
     overflow-x: auto;
 }
 .columTest {
     width: 100px;
-    height:100px;
+    height: 100px;
     column-count: 1;
     column-gap: 10px;
     column-rule: 1px solid #d8d8d8;
-    background-color: #000000
+    background-color: #000000;
 }
 
 .perColum {
     width: 100px;
-    height:20px;
-    line-height:20px;
+    height: 20px;
+    line-height: 20px;
     background-color: #4e4e4e;
 }
 
@@ -554,16 +592,16 @@ a:hover {
 .mediaQuery {
     width: 100px;
     height: 100px;
-    background-color: #000000
+    background-color: #000000;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
     .mediaQuery {
         background-color: red;
     }
 }
 
-@media screen and (max-width:600) {
+@media screen and (max-width: 600) {
     .mediaQuery {
         background-color: blue;
     }
@@ -613,7 +651,7 @@ body {
 .ieTest {
     width: 100%;
     height: 3px;
-    background-color: #30363C;
+    background-color: #30363c;
     text-align: center;
     display: flex;
     display: -ms-flexbox;
@@ -622,7 +660,7 @@ body {
 .ie1 {
     flex: 1;
     -ms-flex: 1;
-    background-color: #E50E0E;
+    background-color: #e50e0e;
 }
 
 .ie2 {
@@ -632,7 +670,7 @@ body {
 .ie3 {
     flex: 1;
     -ms-flex: 1;
-    background-color: #008DFF;
+    background-color: #008dff;
 }
 
 .content_2 {
@@ -643,11 +681,9 @@ body {
 /*-----------------------------------------------------------------------------------------
  单位测试
 ------------------------------------------------------------------------------------------*/
-.dVm{
-	width: 10vw;
-	height:10vh;
-	background-color: #000000;
-	color:#ffffff;
+.dVm {
+    width: 10vw;
+    height: 10vh;
+    background-color: #000000;
+    color: #ffffff;
 }
-
-
