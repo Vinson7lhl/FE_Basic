@@ -687,3 +687,44 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+
+/*-----------------------------------------------------------------------------------------
+ grid布局
+------------------------------------------------------------------------------------------*/
+.gridLayout{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    row-gap: 10px;
+    column-gap: 10px;  
+    text-align: center;
+    line-height: 100px;
+    font-size:48px;
+}
+.gridItem:nth-child(1){
+    background-color: #ef3429;
+}
+.gridItem:nth-child(2){
+    background-color: #f68f25;
+}
+.gridItem:nth-child(3){
+    background-color: #4ba846;
+}
+.gridItem:nth-child(4){
+    background-color: #0476c2;
+}
+.gridItem:nth-child(5){
+    background-color: #c077af;
+}
+.gridItem:nth-child(6){
+    background-color: #f8d29d;
+}
+.gridItem:nth-child(7){
+    background-color: #b4a87f;
+}
+.gridItem:nth-child(8){
+    background-color: #d0e4a8;
+}
+.gridItem:nth-child(9){
+    background-color: #4dc7ec;
+}
