@@ -50,6 +50,16 @@ div {
     font-family: lhl;
     font-size: 28px;
 }
+.glassesContainer{
+    width:200px;
+    height:200px;
+    position: fixed;
+    left:0;
+    top:100px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
 /*-----------------------------------------------------------------------------------------
  css定义变量
 ------------------------------------------------------------------------------------------*/
